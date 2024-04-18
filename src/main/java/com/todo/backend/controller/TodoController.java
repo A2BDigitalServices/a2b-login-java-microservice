@@ -38,8 +38,8 @@ import com.todo.backend.services.TodoService;
 import com.todo.backend.services.UserSingUpServiceImpl;
 import com.todo.backend.util.JwtUtil;
 
-//@CrossOrigin(origins = "https://a2bdigital.000webhostapp.com")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://a2bdigital.000webhostapp.com")
+//@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @Slf4j
 public class TodoController {
