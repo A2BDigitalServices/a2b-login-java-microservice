@@ -18,7 +18,7 @@ import com.todo.backend.entities.Todo;
 import com.todo.backend.repo.OpenLoanRepo;
 import com.todo.backend.services.OpenLoanService;
 
-@CrossOrigin(origins = "https://a2bdigitalservice.000webhostapp.com/")
+@CrossOrigin(origins = "https://a2bdigital.000webhostapp.com/")
 //@CrossOrigin(origins = "http://127.0.0.1:8080/")
 //@CrossOrigin(origins = "http://localhost:4200")
 @RestController
