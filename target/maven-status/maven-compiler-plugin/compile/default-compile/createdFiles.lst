@@ -21,5 +21,6 @@ com\todo\backend\services\UserSingUpServiceImpl.class
 com\todo\backend\controller\TodoController.class
 com\todo\backend\repo\TodoRepo.class
 com\todo\backend\config\SecurityConfig.class
+com\todo\backend\services\OpenLoanService.class
 com\todo\backend\repo\UserRepository.class
 com\todo\backend\entities\OpenLoan.class

@@ -32,6 +32,8 @@ public class OpenLoan implements Serializable{
 	private String status;
 	private String remarks;
 	
+	public OpenLoan() {}
+	
 	public OpenLoan(String firstname, String lastname, String email, String phone, String address, String partnerType,
 			String status, String remarks) {
 		this.firstname = firstname;
