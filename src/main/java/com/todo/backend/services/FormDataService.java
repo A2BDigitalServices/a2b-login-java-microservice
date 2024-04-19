@@ -14,8 +14,8 @@ public class FormDataService {
 	private FormDataRepo formDataRepo;
 	
 	public long createFormData(FormData formData) {
-		formDataRepo.save(formData);
-		return formData.getId();
+		return formDataRepo.save(formData).getId();
+		
 	}
 	
 	public List<FormData> getAllFormData() {

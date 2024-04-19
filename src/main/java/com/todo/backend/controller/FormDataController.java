@@ -24,9 +24,9 @@ public class FormDataController {
 	private FormDataService formDataService;
 	
 	@PostMapping("/form")
-	public FormData createTodo(@RequestBody FormData formData) {
-		formDataService.createFormData(formData);
-		return formData;
+	public long createTodo(@RequestBody FormData formData) {
+		return formDataService.createFormData(formData);
+		
 	}
 	
 	@GetMapping("/forms")
