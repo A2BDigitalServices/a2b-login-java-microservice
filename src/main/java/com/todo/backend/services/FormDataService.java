@@ -1,6 +1,8 @@
 package com.todo.backend.services;
 
 import java.util.List;
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,7 @@ public class FormDataService {
 	private FormDataRepo formDataRepo;
 	
 	public long createFormData(FormData formData) {
+		formData.setId(generateUniqueFiveDigitNumber());
 		return formDataRepo.save(formData).getId();
 		
 	}
@@ -78,5 +81,18 @@ public class FormDataService {
 		formDataRepo.save(updatedTodo);
 		return updatedTodo;
 		
+	}
+	
+	private long generateUniqueFiveDigitNumber() {
+	    // Generate a random 5-digit number between 10000 and 99999
+	    Random random = new Random();
+	    long uniqueNumber = random.nextInt(90000) + 10000;
+
+	    // Ensure the generated number is unique in the database
+	    while (formDataRepo.existsById(uniqueNumber)) {
+	        uniqueNumber = random.nextInt(90000) + 10000;
+	    }
+
+	    return uniqueNumber;
 	}
 }
