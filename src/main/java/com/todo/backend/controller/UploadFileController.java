@@ -17,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.todo.backend.services.StorageService;
 
-@CrossOrigin
+@CrossOrigin(origins = {"https://a2bdigital.000webhostapp.com/","https://a2bdigitalservice.000webhostapp.com/"})
 @RestController
 @RequestMapping("/image")
 public class UploadFileController {
@@ -36,7 +36,7 @@ public class UploadFileController {
 	public ResponseEntity<?> downloadImage(@PathVariable String fileName){
 		byte[] imageData=service.downloadImage(fileName);
 		return ResponseEntity.status(HttpStatus.OK)
-				.contentType(MediaType.valueOf("image/png"))
+				.contentType(MediaType.valueOf("image/jpeg"))
 				.body(imageData);
 
 	}
