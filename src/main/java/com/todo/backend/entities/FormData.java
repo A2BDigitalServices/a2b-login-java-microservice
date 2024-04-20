@@ -66,4 +66,6 @@ public class FormData implements Serializable{
 	private String nomineeage;
 	private String nomineephone;
 	private String nomineeemail;
+	
+	private String status;
 }

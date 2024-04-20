@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.todo.backend.services.StorageService;
 
 @CrossOrigin(origins = {"https://a2bdigital.000webhostapp.com/","https://a2bdigitalservice.000webhostapp.com/"})
+//@CrossOrigin
 @RestController
 @RequestMapping("/image")
 public class UploadFileController {

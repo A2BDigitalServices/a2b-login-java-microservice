@@ -78,6 +78,7 @@ public class FormDataService {
 		updatedTodo.setSophone(formData.getSophone());
 		updatedTodo.setTenure(formData.getTenure());
 		updatedTodo.setTotalEMIAmount(formData.getTotalEMIAmount());
+		updatedTodo.setStatus(formData.getStatus());	
 		formDataRepo.save(updatedTodo);
 		return updatedTodo;
 		
