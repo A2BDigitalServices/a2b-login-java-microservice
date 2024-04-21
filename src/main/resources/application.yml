@@ -49,6 +49,12 @@ spring:
     show-sql: true
   main:
     allow-circular-references: true
+  servlet:
+    multipart:
+      max-file-size: 10 MB
+      max-request-size: 10 MB
+        
+        
 
     
 #spring:
