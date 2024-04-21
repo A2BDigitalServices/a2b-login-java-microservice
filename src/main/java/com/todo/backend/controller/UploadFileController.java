@@ -39,6 +39,7 @@ public class UploadFileController {
 		return ResponseEntity.status(HttpStatus.OK)
 				.contentType(MediaType.valueOf("image/jpeg"))
 				.body(imageData);
-
 	}
+	
+	
 }

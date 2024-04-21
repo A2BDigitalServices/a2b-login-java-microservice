@@ -5,11 +5,13 @@ import org.springframework.stereotype.Repository;
 
 import com.todo.backend.entities.ImageData;
 
-import java.util.Optional;
+import java.util.*;
 
 @Repository
 public interface StorageRepository extends JpaRepository<ImageData,Long> {
 
 
     Optional<ImageData> findByName(String fileName);
+    
+    List<ImageData> findByCaseId(long caseId);
 }

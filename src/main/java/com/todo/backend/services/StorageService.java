@@ -1,20 +1,26 @@
 package com.todo.backend.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.todo.backend.entities.ImageData;
+import com.todo.backend.repo.StorageRepository;
 import com.todo.backend.util.ImageUtils;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
 public class StorageService {
 
     @Autowired
-    private com.todo.backend.repo.StorageRepository repository;
+    private StorageRepository repository;
 
     public String uploadImage(MultipartFile file, String caseId) throws IOException {
 
@@ -34,4 +40,10 @@ public class StorageService {
         byte[] images=ImageUtils.decompressImage(dbImageData.get().getImageData());
         return images;
     }
+    
+    public List<ImageData> getAllDocuments(String caseId) {
+		return repository.findByCaseId(Long.valueOf(caseId));
+	}
+    
+    
 }
