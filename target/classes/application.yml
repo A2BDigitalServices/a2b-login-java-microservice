@@ -53,6 +53,24 @@ spring:
     multipart:
       max-file-size: 10 MB
       max-request-size: 10 MB
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: a2bdigitalservice@gmail.com
+    password: dnuq gppb nlqm hvcu
+    port: 587
+    protocol: smtp
+    test-connection: false
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+        
+      
+      
+
         
         
 

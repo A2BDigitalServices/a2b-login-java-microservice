@@ -2,6 +2,7 @@ package com.todo.backend.controller;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.todo.backend.entities.DeletedMsg;
 import com.todo.backend.entities.FormData;
+import com.todo.backend.entities.MailRequest;
 import com.todo.backend.services.FormDataService;
 
 @CrossOrigin(origins = {"https://a2bdigital.000webhostapp.com/","https://a2bdigitalservice.000webhostapp.com/"})
@@ -23,9 +25,16 @@ public class FormDataController {
 	@Autowired
 	private FormDataService formDataService;
 	
+	@Autowired
+	private SendEmailController sendEmailController;
+	
 	@PostMapping("/form")
 	public long createTodo(@RequestBody FormData formData) {
-		return formDataService.createFormData(formData);
+		FormData createdCase = formDataService.createFormData(formData);
+		long caseId = createdCase.getId();
+		String email = createdCase.getEmail();
+		asynchronousCallToEmailSend(email,caseId);
+		return caseId;
 		
 	}
 	
@@ -51,5 +60,11 @@ public class FormDataController {
 		return formDataService.updateTodo(todo, id);
 	}
 	
-	
+	@Async
+	public void asynchronousCallToEmailSend(String email,long caseId) {
+		MailRequest request = new MailRequest();
+		request.setTo(email);
+		request.setFrom("a2bdigitalservice@gmail.com");
+		sendEmailController.sendEmail(request, String.valueOf(caseId));
+	}
 }

@@ -5,8 +5,11 @@ C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\services\UserSingUpServiceImpl.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\controller\TodoController.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\User.java
+C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\config\ApiConfig.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\services\OpenLoanService.java
+C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\services\EmailService.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\controller\UploadFileController.java
+C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\MailResponse.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\FormData.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\ImageData.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\repo\TodoRepo.java
@@ -24,6 +27,8 @@ C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\util\JwtUtil.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\util\ImageUtils.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\BackEndApplication.java
+C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\controller\SendEmailController.java
+C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\MailRequest.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\SignedUpResponse.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\controller\OpenLoanController.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\AuthenticationBean.java

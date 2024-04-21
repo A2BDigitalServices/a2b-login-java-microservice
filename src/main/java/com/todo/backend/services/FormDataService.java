@@ -15,9 +15,10 @@ public class FormDataService {
 	@Autowired
 	private FormDataRepo formDataRepo;
 	
-	public long createFormData(FormData formData) {
+	public FormData createFormData(FormData formData) {
 		formData.setId(generateUniqueFiveDigitNumber());
-		return formDataRepo.save(formData).getId();
+		formData.setStatus("Applied");
+		return formDataRepo.save(formData);
 		
 	}
 	
