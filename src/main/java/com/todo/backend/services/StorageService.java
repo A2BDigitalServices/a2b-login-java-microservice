@@ -16,11 +16,12 @@ public class StorageService {
     @Autowired
     private com.todo.backend.repo.StorageRepository repository;
 
-    public String uploadImage(MultipartFile file) throws IOException {
+    public String uploadImage(MultipartFile file, String caseId) throws IOException {
 
-        com.todo.backend.entities.ImageData imageData = repository.save(ImageData.builder()
+        ImageData imageData = repository.save(ImageData.builder()
                 .name(file.getOriginalFilename())
                 .type(file.getContentType())
+                .caseId(Long.valueOf(caseId))
                 .imageData(ImageUtils.compressImage(file.getBytes())).build());
         if (imageData != null) {
             return "file uploaded successfully : " + file.getOriginalFilename();

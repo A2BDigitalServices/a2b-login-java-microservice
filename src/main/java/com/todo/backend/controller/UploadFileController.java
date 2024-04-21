@@ -26,9 +26,9 @@ public class UploadFileController {
 	@Autowired
 	private StorageService service;
 
-	@PostMapping
-	public ResponseEntity<?> uploadImage(@RequestParam("image")MultipartFile file) throws IOException {
-		String uploadImage = service.uploadImage(file);
+	@PostMapping("/{caseId}")
+	public ResponseEntity<?> uploadImage(@RequestParam("image")MultipartFile file, @PathVariable String caseId) throws IOException {
+		String uploadImage = service.uploadImage(file, caseId);
 		return ResponseEntity.status(HttpStatus.OK)
 				.body(uploadImage);
 	}
