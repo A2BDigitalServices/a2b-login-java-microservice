@@ -39,12 +39,43 @@ public class EmailService {
 			helper.addAttachment("A2BDigitalService_document1.pdf", new ClassPathResource("A2BDigitalService_document1.pdf"));
 			helper.addAttachment("A2BDigitalServices_document2.jpg", new ClassPathResource("A2BDigitalServices_document2.jpg"));
 
-			Template t = config.getTemplate("email-template.ftl");
+			Template t = config.getTemplate("email-template-applied.ftl");
 			String html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
 
 			helper.setTo(request.getTo());
 			helper.setText(html, true);
 			helper.setSubject("Your loan application submitted successfully.Here is reference number: " + caseId);
+			helper.setFrom(request.getFrom());
+			sender.send(message);
+
+			response.setMessage("mail send to : " + request.getTo());
+			response.setStatus(Boolean.TRUE);
+
+		} catch (MessagingException | IOException | TemplateException e) {
+			response.setMessage("Mail Sending failure : "+e.getMessage());
+			response.setStatus(Boolean.FALSE);
+		}
+
+		return response;
+	}
+	
+	public MailResponse sendEmailWhenProgress(MailRequest request, Map<String, Object> model, String caseId) {
+		MailResponse response = new MailResponse();
+		MimeMessage message = sender.createMimeMessage();
+		try {
+			// set mediaType
+			MimeMessageHelper helper = new MimeMessageHelper(message, MimeMessageHelper.MULTIPART_MODE_MIXED_RELATED,
+					StandardCharsets.UTF_8.name());
+			// add attachment
+			helper.addAttachment("A2BDigitalService_document1.pdf", new ClassPathResource("A2BDigitalService_document1.pdf"));
+			helper.addAttachment("A2BDigitalServices_document2.jpg", new ClassPathResource("A2BDigitalServices_document2.jpg"));
+
+			Template t = config.getTemplate("email-template-progress.ftl");
+			String html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
+
+			helper.setTo(request.getTo());
+			helper.setText(html, true);
+			helper.setSubject("Great! Your loan application is in Progress. Here is reference number: " + caseId);
 			helper.setFrom(request.getFrom());
 			sender.send(message);
 
