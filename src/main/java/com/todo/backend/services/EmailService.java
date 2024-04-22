@@ -137,7 +137,7 @@ public class EmailService {
 	    MimeMessage message = sender.createMimeMessage();
 	    try {
 	        MimeMessageHelper helper = new MimeMessageHelper(message, true, StandardCharsets.UTF_8.name());
-	        Template t = config.getTemplate("email-template-progress.ftl");
+	        Template t = config.getTemplate("email-template-third-party.ftl");
 	        String html = FreeMarkerTemplateUtils.processTemplateIntoString(t, model);
 
 	        helper.setTo(request.getTo());

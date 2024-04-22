@@ -46,6 +46,7 @@ public class SendEmailController {
 		model.put("firstname", formData.getFirstname() != null? formData.getFirstname(): "");
 		model.put("lastname", formData.getLastname() != null ? formData.getLastname() : "");
 		model.put("email", formData.getEmail() != null ? formData.getEmail(): "");
+		model.put("phone", formData.getPhone() != null ? formData.getPhone(): "");
 		model.put("aadhar", formData.getAadharnumber() != null ? formData.getAadharnumber(): "");
 		model.put("pan", formData.getPannumber() != null ? formData.getPannumber(): "");
 		model.put("dob", formData.getDob() != null ? formData.getDob(): "");
