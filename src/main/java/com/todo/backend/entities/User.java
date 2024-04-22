@@ -33,6 +33,8 @@ public class User implements Serializable{
 	
 	@Column(nullable = false,unique=true)
 	private String encryptedPassword;
+	
+	private String role;
 
 	public long getId() {
 		return id;
@@ -80,6 +82,14 @@ public class User implements Serializable{
 
 	public void setEncryptedPassword(String encryptedPassword) {
 		this.encryptedPassword = encryptedPassword;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 }

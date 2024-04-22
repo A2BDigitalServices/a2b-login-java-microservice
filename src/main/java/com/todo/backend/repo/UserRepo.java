@@ -9,5 +9,6 @@ import com.todo.backend.entities.User;
 
 @Repository
 public interface UserRepo extends JpaRepository<User, String>{
-
+	
+	public User findByEmail(String username);
 }

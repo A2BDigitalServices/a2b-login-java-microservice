@@ -3,7 +3,6 @@ C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\UserResponse.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\services\TodoService.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\services\UserSingUpServiceImpl.java
-C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\controller\TodoController.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\User.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\config\ApiConfig.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\services\OpenLoanService.java
@@ -17,6 +16,7 @@ C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\repo\UserRepository.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\services\UserServiceImpl.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\UserRequest.java
+C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\controller\UserController.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\DeletedMsg.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\LoggedInResponse.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\OpenLoan.java
@@ -29,6 +29,7 @@ C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\BackEndApplication.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\controller\SendEmailController.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\MailRequest.java
+C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\LoginResponse.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\SignedUpResponse.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\controller\OpenLoanController.java
 C:\Users\maham\OneDrive\Desktop\todo_project\todo_project_backend\src\main\java\com\todo\backend\entities\AuthenticationBean.java

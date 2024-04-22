@@ -10,10 +10,10 @@ com\todo\backend\entities\Todo.class
 com\todo\backend\entities\UserDto.class
 com\todo\backend\entities\UserRequest.class
 com\todo\backend\entities\MailResponse.class
+com\todo\backend\entities\LoginResponse.class
 com\todo\backend\entities\FormData.class
 com\todo\backend\exceptions\InvalidCredentialsException.class
 com\todo\backend\services\UserServiceImpl.class
-com\todo\backend\controller\TodoController.class
 com\todo\backend\controller\UploadFileController.class
 com\todo\backend\config\SecurityConfig.class
 com\todo\backend\repo\UserRepository.class
@@ -35,6 +35,7 @@ com\todo\backend\repo\UserRepo.class
 com\todo\backend\services\UserSingUpServiceImpl.class
 com\todo\backend\repo\TodoRepo.class
 com\todo\backend\config\ApiConfig.class
+com\todo\backend\controller\UserController.class
 com\todo\backend\services\OpenLoanService.class
 com\todo\backend\controller\SendEmailController.class
 com\todo\backend\entities\ImageData.class

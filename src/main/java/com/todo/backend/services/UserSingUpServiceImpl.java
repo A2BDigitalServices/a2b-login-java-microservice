@@ -27,8 +27,14 @@ public class UserSingUpServiceImpl {
 		ModelMapper mapper = new ModelMapper();
 		mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 		User userEntity = mapper.map(userDetails, User.class);
+		userEntity.setRole("customer");
 		repo.save(userEntity);
 		UserDto userDto = mapper.map(userEntity, UserDto.class);
 		return userDto;
+	}
+	
+	public String getRoleByUserName(String username) {
+		User user = repo.findByEmail(username);
+		return user.getRole();
 	}
 }
