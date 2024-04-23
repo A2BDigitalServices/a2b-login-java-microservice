@@ -111,4 +111,9 @@ public class UserController {
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 	
+	@GetMapping("/firstname/{username}")
+	public String getFirstName(@PathVariable String username) {
+		String firstname = service1.getFirstNameByUsername(username);
+		return firstname;
+	}
 }

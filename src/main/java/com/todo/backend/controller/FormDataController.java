@@ -35,9 +35,9 @@ public class FormDataController {
 	@Autowired
 	private EmailService emailService;
 	
-	@PostMapping("/form")
-	public long createTodo(@RequestBody FormData formData) {
-		FormData createdCase = formDataService.createFormData(formData);
+	@PostMapping("/form/{a2bemployeeemail}")
+	public long createTodo(@RequestBody FormData formData,@PathVariable String a2bemployeeemail) {
+		FormData createdCase = formDataService.createFormData(formData, a2bemployeeemail);
 		long caseId = createdCase.getId();
 		String email = createdCase.getEmail();
 		asynchronousCallToEmailSend(email,caseId);

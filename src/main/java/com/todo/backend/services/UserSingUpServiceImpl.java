@@ -37,4 +37,9 @@ public class UserSingUpServiceImpl {
 		User user = repo.findByEmail(username);
 		return user.getRole();
 	}
+	
+	public String getFirstNameByUsername(String username) {
+		User user = repo.findByEmail(username);
+		return user != null? user.getFirstname(): "";
+	}
 }

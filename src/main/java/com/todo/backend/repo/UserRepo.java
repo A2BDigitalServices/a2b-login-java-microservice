@@ -11,4 +11,5 @@ import com.todo.backend.entities.User;
 public interface UserRepo extends JpaRepository<User, String>{
 	
 	public User findByEmail(String username);
+	
 }

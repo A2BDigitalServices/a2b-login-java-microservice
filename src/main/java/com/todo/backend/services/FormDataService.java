@@ -1,5 +1,6 @@
 package com.todo.backend.services;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
 
@@ -15,9 +16,11 @@ public class FormDataService {
 	@Autowired
 	private FormDataRepo formDataRepo;
 	
-	public FormData createFormData(FormData formData) {
+	public FormData createFormData(FormData formData, String a2bemployeeemail) {
 		formData.setId(generateUniqueFiveDigitNumber());
 		formData.setStatus("Applied");
+		formData.setDate(LocalDate.now());	
+		formData.setWhoapplied(a2bemployeeemail);
 		return formDataRepo.save(formData);
 		
 	}

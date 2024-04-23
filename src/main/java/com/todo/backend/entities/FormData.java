@@ -1,6 +1,7 @@
 package com.todo.backend.entities;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -33,10 +34,12 @@ public class FormData implements Serializable{
 	private String phone;
 	private String aadharnumber;
 	private String dob;
+	private String loantype;
 	private String pannumber;
 	private String fname;
 	private String mname;
 	private String sname;
+	private String relationship;
 	private String presentaddressline1;
 	private String presentaddressline2;
 	private String presentlandmark;
@@ -66,12 +69,16 @@ public class FormData implements Serializable{
 	private String totalEMIAmount;
 	private String reference1name;
 	private String reference1phone;
+	private String referencerelationship1;
 	private String reference2name;
 	private String reference2phone;
+	private String referencerelationship2;
 	private String nomineename;
 	private String nomineedob;
 	private String nomineephone;
 	private String nomineeemail;
 	
 	private String status;
+	private LocalDate date;
+	private String whoapplied;
 }
