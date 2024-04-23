@@ -34,19 +34,23 @@ public class FormData implements Serializable{
 	private String aadharnumber;
 	private String dob;
 	private String pannumber;
-	private String soname;
-	private String sophone;
-	private String somail;
+	private String fname;
+	private String mname;
+	private String sname;
 	private String presentaddressline1;
 	private String presentaddressline2;
+	private String presentlandmark;
 	private String presentstate;
 	private String presentcountry;
 	private String presentpincode;
+	private String presentpostaloffice;
 	private String permanentaddressline1;
 	private String permanentaddressline2;
+	private String permanentlandmark;
 	private String permanentstate;
 	private String permanentcountry;
 	private String permanentpincode;
+	private String permanentpostaloffice;
 	private String companyname;
 	private String companyaddressline1;
 	private String companyaddressline2;
@@ -54,6 +58,7 @@ public class FormData implements Serializable{
 	private String companycountry;
 	private String companypincode;
 	private String companyemail;
+	private String monthlymode;
 	private String monthlyincome;
 	private String requiredamount;
 	private String tenure;
@@ -64,7 +69,7 @@ public class FormData implements Serializable{
 	private String reference2name;
 	private String reference2phone;
 	private String nomineename;
-	private String nomineeage;
+	private String nomineedob;
 	private String nomineephone;
 	private String nomineeemail;
 	

@@ -50,16 +50,23 @@ public class SendEmailController {
 		model.put("aadhar", formData.getAadharnumber() != null ? formData.getAadharnumber(): "");
 		model.put("pan", formData.getPannumber() != null ? formData.getPannumber(): "");
 		model.put("dob", formData.getDob() != null ? formData.getDob(): "");
-		model.put("pname", formData.getSoname() != null ? formData.getSoname(): "");
-		model.put("pphone", formData.getSophone() != null ? formData.getSophone(): "");
-		model.put("pemail", formData.getSomail() != null ? formData.getSomail(): "");
+		model.put("fname", formData.getFname() != null ? formData.getFname(): "");
+		model.put("mname", formData.getMname() != null ? formData.getMname(): "");
+		model.put("sname", formData.getSname() != null ? formData.getSname(): "");
 		model.put("praddressline1", formData.getPresentaddressline1() != null ? formData.getPresentaddressline1(): "");
 		model.put("praddressline2", formData.getPresentaddressline2() != null ? formData.getPresentaddressline2(): "");
+		model.put("prlandmark", formData.getPresentlandmark() != null ? formData.getPresentlandmark(): "");
 		model.put("prstate", formData.getPresentstate() != null ? formData.getPresentstate(): "");
 		model.put("prcountry", formData.getPresentcountry() != null ? formData.getPresentcountry(): "");
 		model.put("prpincode", formData.getPresentpincode() != null ? formData.getPresentpincode(): "");
+		model.put("prpostalcode", formData.getPresentpostaloffice() != null ? formData.getPresentpostaloffice(): "");
 		model.put("peaddressline1", formData.getPermanentaddressline1() != null ? formData.getPermanentaddressline1(): "");
 		model.put("peaddressline2", formData.getPermanentaddressline2() != null ? formData.getPermanentaddressline2(): "");
+		model.put("pelandmark", formData.getPermanentlandmark() != null ? formData.getPermanentlandmark(): "");
+		model.put("pestate", formData.getPermanentstate() != null ? formData.getPermanentstate(): "");
+		model.put("pecountry", formData.getPermanentcountry() != null ? formData.getPermanentcountry(): "");
+		model.put("pepincode", formData.getPermanentpincode() != null ? formData.getPermanentpincode(): "");
+		model.put("pepostalcode", formData.getPermanentpostaloffice() != null ? formData.getPermanentpostaloffice(): "");
 		model.put("cname", formData.getCompanyname() != null ? formData.getCompanyname(): "");
 		model.put("caddressline1", formData.getCompanyaddressline1() != null ? formData.getCompanyaddressline1(): "");
 		model.put("caddressline2", formData.getCompanyaddressline2() != null ? formData.getCompanyaddressline2(): "");
@@ -72,8 +79,9 @@ public class SendEmailController {
 		model.put("activeloans", formData.getActiveLoans() != null? formData.getActiveLoans(): "");
 		model.put("totalemiamount", formData.getTotalEMIAmount() != null ? formData.getTotalEMIAmount(): "");
 		model.put("nname", formData.getNomineename() != null ? formData.getNomineename(): "");
-		model.put("nage", formData.getNomineeage() != null ? formData.getNomineeage(): "");
+		model.put("nage", formData.getNomineedob() != null ? formData.getNomineedob(): "");
 		model.put("nemail", formData.getNomineeemail() != null ? formData.getNomineeemail(): "");
+		model.put("nphone", formData.getNomineephone() != null ? formData.getNomineephone(): "");
 		return service.sendEmailToThirdParty(request, model, caseId);
 	}
 }
