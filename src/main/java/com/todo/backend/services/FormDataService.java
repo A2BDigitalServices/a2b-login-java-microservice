@@ -105,4 +105,9 @@ public class FormDataService {
 
 	    return uniqueNumber;
 	}
+	
+	public long countOfCases(String status){
+		List<FormData> list = formDataRepo.findByStatus(status);
+		return list.size();
+	}
 }

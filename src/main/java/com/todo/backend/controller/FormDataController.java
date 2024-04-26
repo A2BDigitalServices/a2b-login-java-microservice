@@ -87,4 +87,14 @@ public class FormDataController {
 		emailService.sendEmailWhenProgress(request, model, String.valueOf(caseId));
 		
 	}
+	
+	@GetMapping("/count/{status}")
+	public long findCountOfCases(@PathVariable String status) {
+		return formDataService.countOfCases(status);
+	}
+	
+	@PutMapping("/forms/regular/update/{id}")
+	public FormData updateRegularTodo(@PathVariable long id,@RequestBody FormData todo) {
+		return formDataService.updateTodo(todo, id);
+	}
 }
