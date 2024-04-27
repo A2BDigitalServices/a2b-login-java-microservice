@@ -2,9 +2,13 @@ package com.todo.backend.services;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.todo.backend.entities.FormData;
@@ -109,5 +113,12 @@ public class FormDataService {
 	public long countOfCases(String status){
 		List<FormData> list = formDataRepo.findByStatus(status);
 		return list.size();
+	}
+	
+	public List<FormData> getAllFormDataWithPagination(String offSet, String pageSize) {
+		Pageable pageable = PageRequest.of(Integer.valueOf(offSet)-1, Integer.valueOf(pageSize));
+		Page<FormData> response= formDataRepo.findAll(pageable);
+		List<FormData> contentList = response.getContent();
+		return contentList;
 	}
 }

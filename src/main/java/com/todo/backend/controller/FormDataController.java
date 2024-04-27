@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -96,5 +97,11 @@ public class FormDataController {
 	@PutMapping("/forms/regular/update/{id}")
 	public FormData updateRegularTodo(@PathVariable long id,@RequestBody FormData todo) {
 		return formDataService.updateTodo(todo, id);
+	}
+	
+	@GetMapping("/forms/{offSet}/{pageSize}")
+	public List<FormData> getTodosWithPagination(@PathVariable String offSet,@PathVariable String pageSize){
+		// Extract the content list
+		return formDataService.getAllFormDataWithPagination(offSet,pageSize);
 	}
 }
