@@ -50,9 +50,11 @@ public class SendEmailController {
 		model.put("aadhar", formData.getAadharnumber() != null ? formData.getAadharnumber(): "");
 		model.put("pan", formData.getPannumber() != null ? formData.getPannumber(): "");
 		model.put("dob", formData.getDob() != null ? formData.getDob(): "");
+		model.put("loantype", formData.getLoantype() != null ? formData.getLoantype(): "");
 		model.put("fname", formData.getFname() != null ? formData.getFname(): "");
 		model.put("mname", formData.getMname() != null ? formData.getMname(): "");
 		model.put("sname", formData.getSname() != null ? formData.getSname(): "");
+		model.put("relationship", formData.getRelationship() != null ? formData.getRelationship(): "");
 		model.put("praddressline1", formData.getPresentaddressline1() != null ? formData.getPresentaddressline1(): "");
 		model.put("praddressline2", formData.getPresentaddressline2() != null ? formData.getPresentaddressline2(): "");
 		model.put("prlandmark", formData.getPresentlandmark() != null ? formData.getPresentlandmark(): "");
@@ -74,12 +76,13 @@ public class SendEmailController {
 		model.put("ccountry", formData.getCompanycountry() != null? formData.getCompanycountry(): "");
 		model.put("cpincode", formData.getCompanypincode() != null? formData.getCompanypincode(): "");
 		model.put("cemail", formData.getCompanyemail() != null? formData.getCompanyemail(): "");
+		model.put("monthlymode", formData.getMonthlymode() != null ? formData.getMonthlymode(): "");
 		model.put("monthlyincome", formData.getMonthlyincome() != null? formData.getMonthlyincome():"");
 		model.put("tenure", formData.getTenure() != null ? formData.getTenure(): "");
 		model.put("activeloans", formData.getActiveLoans() != null? formData.getActiveLoans(): "");
 		model.put("totalemiamount", formData.getTotalEMIAmount() != null ? formData.getTotalEMIAmount(): "");
 		model.put("nname", formData.getNomineename() != null ? formData.getNomineename(): "");
-		model.put("nage", formData.getNomineedob() != null ? formData.getNomineedob(): "");
+		model.put("ndob", formData.getNomineedob() != null ? formData.getNomineedob(): "");
 		model.put("nemail", formData.getNomineeemail() != null ? formData.getNomineeemail(): "");
 		model.put("nphone", formData.getNomineephone() != null ? formData.getNomineephone(): "");
 		return service.sendEmailToThirdParty(request, model, caseId);

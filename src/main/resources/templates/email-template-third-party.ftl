@@ -94,7 +94,7 @@
                     <td>${email}</td>
                 </tr>
                                 <tr>
-                    <td>3</td>
+                    <td>4</td>
                     <td class="key">Phone</td>
                     <td>${phone}</td>
                 </tr>
@@ -114,20 +114,30 @@
                     <td>${dob}</td>
                 </tr>
 				<tr>
+                    <td>5</td>
+                    <td class="key">Loan Type</td>
+                    <td>${loantype}</td>
+                </tr>
+				<tr>
                     <td>6</td>
-                    <td class="key">Parent Name</td>
-                    <td>${pname}</td>
+                    <td class="key">Father Name</td>
+                    <td>${fname}</td>
                 </tr>
 				<tr>
                     <td>7</td>
-                    <td class="key">Parent Phone</td>
-                    <td>${pphone}</td>
+                    <td class="key">Mother Phone</td>
+                    <td>${mname}</td>
                 </tr>
 				<tr>
                     <td>8</td>
-                    <td class="key">Parent Email</td>
-                    <td>${pemail}</td>
+                    <td class="key">Spouse Email</td>
+                    <td>${sname}</td>
                 </tr>
+				<tr>
+                    <td>8</td>
+                    <td class="key">Relationship Type</td>
+                    <td>${relationship}</td>
+                </tr>                
 				<tr>
                     <td>9</td>
                     <td class="key">Present Address Line1</td>
@@ -137,6 +147,11 @@
                     <td>10</td>
                     <td class="key">Present Address Line2</td>
                     <td>${praddressline2}</td>
+                </tr>
+				<tr>
+                    <td>11</td>
+                    <td class="key">Present Landmark</td>
+                    <td>${prlandmark}</td>
                 </tr>
 				<tr>
                     <td>11</td>
@@ -154,6 +169,11 @@
                     <td>${prpincode}</td>
                 </tr>
 				<tr>
+                    <td>13</td>
+                    <td class="key">Present Postal office</td>
+                    <td>${prpostalcode}</td>
+                </tr>                
+				<tr>
                     <td>14</td>
                     <td class="key">Permanent Address Line1</td>
                     <td>${peaddressline1}</td>
@@ -163,6 +183,11 @@
                     <td class="key">Permanent Address Line2</td>
                     <td>${peaddressline2}</td>
                 </tr>
+				<tr>
+                    <td>15</td>
+                    <td class="key">Permanent Landmark</td>
+                    <td>${pelandmark}</td>
+                </tr>                
 				<tr>
                     <td>16</td>
                     <td class="key">Company Name</td>
@@ -200,6 +225,11 @@
                 </tr>
 				<tr>
                     <td>23</td>
+                    <td class="key">Monthly Mode</td>
+                    <td>${monthlymode}</td>
+                </tr>                
+				<tr>
+                    <td>23</td>
                     <td class="key">Monthly Income</td>
                     <td>${monthlyincome}</td>
                 </tr>		
@@ -225,8 +255,8 @@
                 </tr>				
 					<tr>
                     <td>28</td>
-                    <td class="key">Nominee Age</td>
-                    <td>${nage}</td>
+                    <td class="key">Nominee DOB</td>
+                    <td>${ndob}</td>
                 </tr>	
 				<tr>
                     <td>29</td>

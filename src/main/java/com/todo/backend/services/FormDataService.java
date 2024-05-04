@@ -57,6 +57,7 @@ public class FormDataService {
 		updatedTodo.setCompanypincode(formData.getCompanypincode());
 		updatedTodo.setCompanystate(formData.getCompanystate());
 		updatedTodo.setDob(formData.getDob());
+		updatedTodo.setPhone(formData.getPhone());
 		updatedTodo.setEmail(formData.getEmail());
 		updatedTodo.setFirstname(formData.getFirstname());
 		updatedTodo.setLastname(formData.getLastname());
@@ -69,6 +70,7 @@ public class FormDataService {
 		updatedTodo.setPannumber(formData.getPannumber());
 		updatedTodo.setPermanentaddressline1(formData.getPermanentaddressline1());
 		updatedTodo.setPermanentaddressline2(formData.getPermanentaddressline2());
+		updatedTodo.setPermanentlandmark(formData.getPermanentlandmark());
 		updatedTodo.setPermanentlandmark(formData.getPermanentlandmark());
 		updatedTodo.setPermanentcountry(formData.getPermanentcountry());
 		updatedTodo.setPermanentpincode(formData.getPermanentpincode());
@@ -83,6 +85,7 @@ public class FormDataService {
 		updatedTodo.setPresentstate(formData.getPresentstate());
 		updatedTodo.setReference1name(formData.getReference1name());
 		updatedTodo.setReference1phone(formData.getReference1phone());
+		updatedTodo.setReferencerelationship1(formData.getReferencerelationship1());
 		updatedTodo.setReference2name(formData.getReference2name());
 		updatedTodo.setReference2phone(formData.getReference2phone());
 		updatedTodo.setRequiredamount(formData.getRequiredamount());
@@ -92,6 +95,9 @@ public class FormDataService {
 		updatedTodo.setTenure(formData.getTenure());
 		updatedTodo.setTotalEMIAmount(formData.getTotalEMIAmount());
 		updatedTodo.setStatus(formData.getStatus());	
+		updatedTodo.setLoantype(formData.getLoantype());
+		updatedTodo.setRelationship(formData.getRelationship());
+		updatedTodo.setWhoapplied(formData.getWhoapplied());
 		formDataRepo.save(updatedTodo);
 		return updatedTodo;
 		
